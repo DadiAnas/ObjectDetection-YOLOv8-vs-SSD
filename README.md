@@ -41,6 +41,30 @@ venv\Scripts\activate  # Windows
 pip install -r requirements.txt
 ```
 
+### Docker Installation & docker usage
+
+1. Build Docker image:
+```bash
+docker build . -t object-detector-ssd-yolo8
+```
+
+2. Allow X server connections and run container:
+```bash
+xhost +local:
+
+docker run -it --rm \
+    --device=/dev/video0:/dev/video0 \
+    -e DISPLAY=:0 \
+    -e QT_X11_NO_MITSHM=1 \
+    -e XAUTHORITY=/tmp/.docker.xauth \
+    -v ${PWD}:/app \
+    -v /tmp/.X11-unix:/tmp/.X11-unix:rw \
+    -v /tmp/.docker.xauth:/tmp/.docker.xauth:rw \
+    --network=host \
+    --gpus all \
+    object-detector-ssd-yolo8
+```
+
 ## Usage
 
 ### Basic Usage
@@ -116,7 +140,7 @@ Weaknesses:
 
 To test detection accuracy:
 ```bash
-python3 main.py 
+python3 main.py
 ```
 
 
@@ -137,4 +161,3 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - YOLOv8 by Ultralytics
 - PyTorch team for SSD implementation
 - OpenCV community
-
