@@ -25,7 +25,7 @@ This project implements and compares two popular object detection algorithms: YO
 1. Clone the repository:
 ```bash
 git clone https://github.com/DadiAnas/ObjectDetection-YOLOv8-vs-SSD.git
-cd object-detection-comparison
+cd ObjectDetection-YOLOv8-vs-SSD
 ```
 
 2. Create and activate virtual environment:
