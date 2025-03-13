@@ -116,7 +116,7 @@ Weaknesses:
 
 To test detection accuracy:
 ```bash
-python main.py --detector YOLOv8Detector --model_path yolov8s.pt --confidence_threshold 0.5 --input_path test_images
+python3 main.py 
 ```
 
 
