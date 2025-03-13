@@ -2,6 +2,9 @@
 
 This project implements and compares two popular object detection algorithms: YOLOv8 and SSD (Single Shot Detector). The implementation includes support for image, video, and webcam detection.
 
+![yolob8](images/yolov8.jpeg)
+
+![ssd](images/ssd.jpeg)
 ## Features
 
 - Multiple object detection models:
